@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" fill="none">
+  <!-- Warm glow circle behind icon -->
+  <circle cx="52" cy="52" r="40" fill="#C67D5B" opacity="0.12"/>
+
+  <!-- Salt grain / light burst icon -->
+  <g transform="translate(52, 52)">
+    <!-- Center dot (salt crystal) -->
+    <circle cx="0" cy="0" r="6" fill="#C67D5B"/>
+    <!-- Light rays -->
+    <line x1="0" y1="-12" x2="0" y2="-24" stroke="#C67D5B" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="0" y1="12" x2="0" y2="24" stroke="#C67D5B" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="-12" y1="0" x2="-24" y2="0" stroke="#C67D5B" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="12" y1="0" x2="24" y2="0" stroke="#C67D5B" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Diagonal rays -->
+    <line x1="-8.5" y1="-8.5" x2="-17" y2="-17" stroke="#C67D5B" stroke-width="2" stroke-linecap="round"/>
+    <line x1="8.5" y1="-8.5" x2="17" y2="-17" stroke="#C67D5B" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-8.5" y1="8.5" x2="-17" y2="17" stroke="#C67D5B" stroke-width="2" stroke-linecap="round"/>
+    <line x1="8.5" y1="8.5" x2="17" y2="17" stroke="#C67D5B" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Brand text -->
+  <text x="105" y="44" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="700" fill="#5C4A3A" letter-spacing="0.5">Salt &amp; Light</text>
+  <text x="105" y="72" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="400" fill="#C67D5B" letter-spacing="4">SOCIAL</text>
+
+  <!-- Subtle tagline -->
+  <text x="105" y="100" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="300" fill="#8B7355" letter-spacing="1.5">Orange County, CA</text>
+</svg>
