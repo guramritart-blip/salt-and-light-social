@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You're In! | Salt & Light Social</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-cream: #FDF6EC;
+            --color-warm-white: #FFFAF3;
+            --color-terracotta: #C67D5B;
+            --color-terracotta-dark: #A8624A;
+            --color-sage: #8B9E7E;
+            --color-sage-light: #D4DFD0;
+            --color-brown: #5C4A3A;
+            --color-brown-light: #8B7355;
+            --color-text: #3D2E22;
+            --color-text-light: #7A6B5D;
+            --color-sand: #E8DDD0;
+            --font-heading: 'DM Serif Display', serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            background: linear-gradient(170deg, var(--color-cream) 0%, var(--color-sage-light) 50%, var(--color-sand) 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .thank-you-card {
+            max-width: 550px;
+            background: var(--color-warm-white);
+            border-radius: 24px;
+            padding: 4rem 3rem;
+            box-shadow: 0 20px 60px rgba(92, 74, 58, 0.1);
+        }
+
+        .icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        h1 {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            color: var(--color-brown);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        p {
+            color: var(--color-text-light);
+            font-size: 1.05rem;
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .highlight {
+            color: var(--color-terracotta);
+            font-weight: 500;
+        }
+
+        .btn-home {
+            display: inline-block;
+            margin-top: 1.5rem;
+            background: var(--color-terracotta);
+            color: var(--color-warm-white);
+            padding: 0.9rem 2.2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-home:hover {
+            background: var(--color-terracotta-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(198, 125, 91, 0.3);
+        }
+
+        .footer-note {
+            margin-top: 2.5rem;
+            font-size: 0.8rem;
+            color: var(--color-text-light);
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="thank-you-card">
+        <span class="icon">&#127793;</span>
+        <h1>You're In!</h1>
+        <p>We're so glad you're here. We'll reach out soon with details on upcoming events and how to connect with your crew.</p>
+        <p class="highlight">Keep an eye on your inbox.</p>
+        <a href="index.html" class="btn-home">Back to Home</a>
+    </div>
+
+    <p class="footer-note">&copy; 2026 Salt & Light Social &middot; Orange County, CA</p>
+
+</body>
+</html>
