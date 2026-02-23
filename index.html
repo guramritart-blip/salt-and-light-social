@@ -1063,12 +1063,34 @@
             });
         });
 
-        // Form submission
+        // Form submission → Zapier webhook → Notion
         document.getElementById('interestForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            // Replace with your actual form endpoint (Zapier, Google Forms, etc.)
-            // For now, redirect to thank you page
-            window.location.href = 'thank-you.html';
+            const form = e.target;
+            const btn = form.querySelector('button[type="submit"]');
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+
+            const data = {
+                first_name: form.first_name.value,
+                last_name: form.last_name.value,
+                email: form.email.value,
+                age_range: form.age_range.value,
+                social: form.social.value,
+                city: form.city.value
+            };
+
+            fetch('https://hooks.zapier.com/hooks/catch/26162536/ucc8rsl/', {
+                method: 'POST',
+                body: JSON.stringify(data)
+            })
+            .then(function() {
+                window.location.href = 'thank-you.html';
+            })
+            .catch(function() {
+                // Still redirect — Zapier webhooks are fire-and-forget
+                window.location.href = 'thank-you.html';
+            });
         });
     </script>
 
