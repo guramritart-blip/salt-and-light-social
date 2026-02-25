@@ -654,6 +654,89 @@
             margin-top: 1rem;
         }
 
+        /* ===== DISCORD BANNER ===== */
+        .discord-banner {
+            padding: 7rem 2rem;
+            background: var(--color-cream);
+        }
+
+        .discord-card {
+            background: linear-gradient(135deg, #5865F2 0%, #4752C4 100%);
+            border-radius: 24px;
+            padding: 5rem 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .discord-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 50%;
+        }
+
+        .discord-card::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 50%;
+        }
+
+        .discord-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .discord-icon {
+            font-size: 3.5rem;
+            display: block;
+            margin-bottom: 2rem;
+        }
+
+        .discord-card h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            color: #FFFFFF;
+            margin-bottom: 1.5rem;
+        }
+
+        .discord-card p {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 1.1rem;
+            font-weight: 300;
+            max-width: 500px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.8;
+        }
+
+        .btn-discord {
+            display: inline-block;
+            background: #FFFFFF;
+            color: #5865F2;
+            padding: 1.1rem 2.8rem;
+            border-radius: 50px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-discord:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+        }
+
         /* ===== FOOTER ===== */
         footer {
             padding: 3rem 2rem;
@@ -770,6 +853,7 @@
             <li><a href="#activities">Activities</a></li>
             <li><a href="#values">Values</a></li>
             <li><a href="#faq">FAQ</a></li>
+            <li><a href="https://discord.gg/YbPSuGEZ" target="_blank">Discord</a></li>
             <li><a href="#signup" class="nav-cta">Join Us</a></li>
         </ul>
         <button class="mobile-toggle" aria-label="Toggle menu">
@@ -786,7 +870,7 @@
         <p>A faith-rooted social community for good-hearted people in OC who just want to do life together. No divisive politics. No drama. Just real humans doing fun things.</p>
         <div class="hero-buttons">
             <a href="#signup" class="btn-primary">Join the Community</a>
-            <a href="#about" class="btn-secondary">Learn More</a>
+            <a href="https://discord.gg/YbPSuGEZ" target="_blank" class="btn-secondary">Join Our Discord</a>
         </div>
         <div class="hero-scroll">
             <span>Scroll</span>
@@ -982,6 +1066,20 @@
         </div>
     </section>
 
+    <!-- DISCORD BANNER -->
+    <section class="discord-banner" id="discord">
+        <div class="container">
+            <div class="discord-card fade-in">
+                <div class="discord-content">
+                    <span class="discord-icon">💬</span>
+                    <h2>Join Us on Discord</h2>
+                    <p>This is where the community hangs out. Jump in, say hi, and connect with your people.</p>
+                    <a href="https://discord.gg/YbPSuGEZ" target="_blank" class="btn-discord">Join Our Discord Server →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- SIGNUP -->
     <section class="signup" id="signup">
         <div class="container">
@@ -1019,6 +1117,7 @@
     <!-- FOOTER -->
     <footer>
         <div class="footer-logo">Salt & Light Social</div>
+        <p><a href="https://discord.gg/YbPSuGEZ" target="_blank" style="margin-right: 0.5rem;">Join Our Discord</a></p>
         <p>&copy; 2026 Salt & Light Social &middot; Orange County, CA</p>
     </footer>
 
