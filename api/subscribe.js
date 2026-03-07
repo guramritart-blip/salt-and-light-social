@@ -23,7 +23,7 @@ export default async function handler(req, res) {
   }).catch(() => {});
 
   // 2. Send welcome email
-  const welcomeHtml = readFileSync(join(process.cwd(), 'newsletter-welcome.html'), 'utf8');
+  const welcomeHtml = readFileSync(join(process.cwd(), 'newsletter-welcome-new.html'), 'utf8');
   const firstName = first_name || 'Friend';
 
   await fetch('https://api.brevo.com/v3/smtp/email', {

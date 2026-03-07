@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unsubscribe | Salt & Light Social</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #FDF6EC;
+            color: #3D2E22;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+        .card {
+            background: #FFFAF3;
+            border-radius: 20px;
+            padding: 48px 40px;
+            max-width: 480px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 4px 30px rgba(92, 74, 58, 0.08);
+        }
+        .icon { font-size: 48px; margin-bottom: 20px; }
+        h1 { font-size: 24px; font-weight: 700; color: #5C4A3A; margin-bottom: 12px; }
+        p { font-size: 15px; color: #7A6B5D; font-weight: 300; line-height: 1.7; margin-bottom: 24px; }
+        input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1.5px solid #E8DDD0;
+            border-radius: 12px;
+            font-size: 15px;
+            color: #3D2E22;
+            background: #FDF6EC;
+            margin-bottom: 16px;
+            outline: none;
+            font-family: inherit;
+        }
+        input:focus { border-color: #C67D5B; }
+        button {
+            width: 100%;
+            padding: 14px;
+            background: #5C4A3A;
+            color: #FFFAF3;
+            border: none;
+            border-radius: 50px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: inherit;
+            transition: background 0.3s;
+        }
+        button:hover { background: #4A3728; }
+        .success { display: none; }
+        .success .icon { font-size: 40px; }
+        a { color: #C67D5B; text-decoration: none; font-weight: 500; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div id="form-view">
+            <div class="icon">🌿</div>
+            <h1>Unsubscribe</h1>
+            <p>We're sorry to see you go. Enter your email below and we'll remove you from our list immediately.</p>
+            <input type="email" id="emailInput" placeholder="Your email address" />
+            <button id="submitBtn" onclick="unsubscribe()">Unsubscribe</button>
+        </div>
+        <div class="success" id="success-view">
+            <div class="icon">✅</div>
+            <h1>You've been unsubscribed</h1>
+            <p>You've been removed from the Salt & Light Social newsletter. We wish you all the best!</p>
+            <p><a href="https://saltandlight.social">← Back to saltandlight.social</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Pre-fill email from URL param
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('email')) {
+            document.getElementById('emailInput').value = params.get('email');
+        }
+
+        async function unsubscribe() {
+            const email = document.getElementById('emailInput').value.trim();
+            if (!email) return;
+
+            const btn = document.getElementById('submitBtn');
+            btn.textContent = 'Removing...';
+            btn.disabled = true;
+
+            try {
+                await fetch('/api/unsubscribe', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email })
+                });
+            } catch (e) {}
+
+            document.getElementById('form-view').style.display = 'none';
+            document.getElementById('success-view').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
