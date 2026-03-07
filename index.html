@@ -1187,15 +1187,18 @@
                 city: form.city.value
             };
 
+            // Send to Zapier → Notion
             fetch('https://hooks.zapier.com/hooks/catch/26162536/ucc8rsl/', {
                 method: 'POST',
                 body: JSON.stringify(data)
-            })
-            .then(function() {
-                window.location.href = 'thank-you.html';
-            })
-            .catch(function() {
-                // Still redirect — Zapier webhooks are fire-and-forget
+            }).catch(function() {});
+
+            // Add to Brevo newsletter list
+            fetch('/api/subscribe', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            }).catch(function() {}).finally(function() {
                 window.location.href = 'thank-you.html';
             });
         });
