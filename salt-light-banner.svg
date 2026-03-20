@@ -4,26 +4,26 @@
       @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400&amp;display=swap');
     </style>
 
-    <!-- Watercolor filter: turbulence displaces edges, then soft blur -->
+    <!-- Watercolor: blur shape first → displace with turbulence → ragged organic edges -->
     <filter id="wc-a" x="-40%" y="-40%" width="180%" height="180%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.025 0.032" numOctaves="6" seed="3" result="noise"/>
-      <feDisplacementMap in="SourceGraphic" in2="noise" scale="120" xChannelSelector="R" yChannelSelector="G" result="d"/>
-      <feGaussianBlur in="d" stdDeviation="18"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blurred"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.018 0.024" numOctaves="6" seed="3" result="noise"/>
+      <feDisplacementMap in="blurred" in2="noise" scale="200" xChannelSelector="R" yChannelSelector="G"/>
     </filter>
     <filter id="wc-b" x="-40%" y="-40%" width="180%" height="180%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.028 0.022" numOctaves="6" seed="8" result="noise"/>
-      <feDisplacementMap in="SourceGraphic" in2="noise" scale="110" xChannelSelector="R" yChannelSelector="G" result="d"/>
-      <feGaussianBlur in="d" stdDeviation="14"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blurred"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.022 0.016" numOctaves="6" seed="8" result="noise"/>
+      <feDisplacementMap in="blurred" in2="noise" scale="180" xChannelSelector="R" yChannelSelector="G"/>
     </filter>
     <filter id="wc-c" x="-40%" y="-40%" width="180%" height="180%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.022 0.035" numOctaves="5" seed="12" result="noise"/>
-      <feDisplacementMap in="SourceGraphic" in2="noise" scale="130" xChannelSelector="R" yChannelSelector="G" result="d"/>
-      <feGaussianBlur in="d" stdDeviation="22"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="14" result="blurred"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.016 0.028" numOctaves="5" seed="12" result="noise"/>
+      <feDisplacementMap in="blurred" in2="noise" scale="220" xChannelSelector="R" yChannelSelector="G"/>
     </filter>
     <filter id="wc-d" x="-40%" y="-40%" width="180%" height="180%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.03 0.025" numOctaves="6" seed="17" result="noise"/>
-      <feDisplacementMap in="SourceGraphic" in2="noise" scale="100" xChannelSelector="R" yChannelSelector="G" result="d"/>
-      <feGaussianBlur in="d" stdDeviation="16"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="11" result="blurred"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.020 0.018" numOctaves="6" seed="17" result="noise"/>
+      <feDisplacementMap in="blurred" in2="noise" scale="160" xChannelSelector="R" yChannelSelector="G"/>
     </filter>
   </defs>
 
