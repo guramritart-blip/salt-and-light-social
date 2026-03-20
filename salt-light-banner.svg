@@ -1,185 +1,109 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 7200" width="2400" height="7200">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7200 2400" width="7200" height="2400">
   <defs>
-    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FDF6EC"/>
-      <stop offset="50%" stop-color="#FFFAF3"/>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F5EDE0"/>
+      <stop offset="40%" stop-color="#FFFAF3"/>
+      <stop offset="60%" stop-color="#FFFAF3"/>
       <stop offset="100%" stop-color="#F5EDE0"/>
     </linearGradient>
     <linearGradient id="accentGrad" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#C67D5B"/>
-      <stop offset="100%" stop-color="#D4956E"/>
+      <stop offset="50%" stop-color="#D4956E"/>
+      <stop offset="100%" stop-color="#C67D5B"/>
     </linearGradient>
   </defs>
 
   <!-- Background -->
-  <rect width="2400" height="7200" fill="url(#bgGrad)"/>
+  <rect width="7200" height="2400" fill="url(#bgGrad)"/>
 
-  <!-- Top decorative border -->
-  <rect x="0" y="0" width="2400" height="18" fill="url(#accentGrad)"/>
-  <rect x="0" y="7182" width="2400" height="18" fill="url(#accentGrad)"/>
+  <!-- Top + bottom border bars -->
+  <rect x="0" y="0" width="7200" height="22" fill="url(#accentGrad)"/>
+  <rect x="0" y="2378" width="7200" height="22" fill="url(#accentGrad)"/>
 
-  <!-- Subtle side borders -->
-  <rect x="0" y="0" width="10" height="7200" fill="#C67D5B" opacity="0.4"/>
-  <rect x="2390" y="0" width="10" height="7200" fill="#C67D5B" opacity="0.4"/>
+  <!-- Decorative inner rules -->
+  <line x1="0" y1="55" x2="7200" y2="55" stroke="#E8DDD0" stroke-width="2.5"/>
+  <line x1="0" y1="2345" x2="7200" y2="2345" stroke="#E8DDD0" stroke-width="2.5"/>
 
-  <!-- Top decorative line cluster -->
-  <line x1="200" y1="320" x2="2200" y2="320" stroke="#E8DDD0" stroke-width="3"/>
-  <line x1="200" y1="340" x2="2200" y2="340" stroke="#C67D5B" stroke-width="1.5" opacity="0.5"/>
-
-  <!-- Sun/light burst icon -->
-  <g transform="translate(1200, 680)">
-    <!-- Outer rays -->
-    <g stroke="#C67D5B" stroke-width="6" opacity="0.6">
-      <line x1="0" y1="-160" x2="0" y2="-220"/>
-      <line x1="113" y1="-113" x2="156" y2="-156"/>
-      <line x1="160" y1="0" x2="220" y2="0"/>
-      <line x1="113" y1="113" x2="156" y2="156"/>
-      <line x1="0" y1="160" x2="0" y2="220"/>
-      <line x1="-113" y1="113" x2="-156" y2="156"/>
-      <line x1="-160" y1="0" x2="-220" y2="0"/>
-      <line x1="-113" y1="-113" x2="-156" y2="-156"/>
+  <!-- LEFT SIDE — Sun icon -->
+  <g transform="translate(700, 1200)">
+    <g stroke="#C67D5B" stroke-width="7" opacity="0.5">
+      <line x1="0" y1="-280" x2="0" y2="-380"/>
+      <line x1="198" y1="-198" x2="269" y2="-269"/>
+      <line x1="280" y1="0" x2="380" y2="0"/>
+      <line x1="198" y1="198" x2="269" y2="269"/>
+      <line x1="0" y1="280" x2="0" y2="380"/>
+      <line x1="-198" y1="198" x2="-269" y2="269"/>
+      <line x1="-280" y1="0" x2="-380" y2="0"/>
+      <line x1="-198" y1="-198" x2="-269" y2="-269"/>
     </g>
-    <!-- Inner circle -->
-    <circle cx="0" cy="0" r="110" fill="none" stroke="#C67D5B" stroke-width="5" opacity="0.5"/>
-    <circle cx="0" cy="0" r="80" fill="#C67D5B" opacity="0.12"/>
-    <!-- Center dot -->
-    <circle cx="0" cy="0" r="22" fill="#C67D5B" opacity="0.7"/>
+    <circle cx="0" cy="0" r="200" fill="none" stroke="#C67D5B" stroke-width="7" opacity="0.4"/>
+    <circle cx="0" cy="0" r="140" fill="#C67D5B" opacity="0.08"/>
+    <circle cx="0" cy="0" r="42" fill="#C67D5B" opacity="0.6"/>
   </g>
 
-  <!-- SALT -->
-  <text x="1200" y="1380"
+  <!-- CENTER — Main text block -->
+  <!-- SALT & LIGHT -->
+  <text x="3600" y="980"
     font-family="Georgia, 'Times New Roman', serif"
-    font-size="480"
+    font-size="680"
     font-weight="700"
     fill="#5C4A3A"
     text-anchor="middle"
-    letter-spacing="60">SALT</text>
+    letter-spacing="40">SALT &amp; LIGHT</text>
 
-  <!-- Ampersand divider line -->
-  <line x1="340" y1="1500" x2="960" y2="1500" stroke="#C67D5B" stroke-width="4" opacity="0.7"/>
-  <text x="1200" y="1560"
-    font-family="Georgia, 'Times New Roman', serif"
-    font-size="130"
-    font-weight="400"
-    fill="#C67D5B"
-    text-anchor="middle"
-    letter-spacing="18"
-    font-style="italic">&amp;</text>
-  <line x1="1440" y1="1500" x2="2060" y2="1500" stroke="#C67D5B" stroke-width="4" opacity="0.7"/>
-
-  <!-- LIGHT -->
-  <text x="1200" y="2100"
-    font-family="Georgia, 'Times New Roman', serif"
-    font-size="480"
-    font-weight="700"
-    fill="#5C4A3A"
-    text-anchor="middle"
-    letter-spacing="40">LIGHT</text>
-
-  <!-- Divider ornament -->
-  <g transform="translate(1200, 2340)">
-    <line x1="-400" y1="0" x2="-60" y2="0" stroke="#E8DDD0" stroke-width="3"/>
-    <circle cx="0" cy="0" r="10" fill="#C67D5B" opacity="0.8"/>
-    <circle cx="-30" cy="0" r="5" fill="#C67D5B" opacity="0.4"/>
-    <circle cx="30" cy="0" r="5" fill="#C67D5B" opacity="0.4"/>
-    <line x1="60" y1="0" x2="400" y2="0" stroke="#E8DDD0" stroke-width="3"/>
-  </g>
+  <!-- Thin rule under title -->
+  <line x1="1800" y1="1080" x2="5400" y2="1080" stroke="#C67D5B" stroke-width="4" opacity="0.6"/>
 
   <!-- Tagline -->
-  <text x="1200" y="2720"
+  <text x="3600" y="1380"
     font-family="Georgia, 'Times New Roman', serif"
-    font-size="175"
+    font-size="200"
     font-weight="400"
     fill="#3D2E22"
     text-anchor="middle"
-    letter-spacing="8"
+    letter-spacing="10"
     font-style="italic">Find your people again.</text>
 
-  <!-- Thin rule below tagline -->
-  <line x1="500" y1="2820" x2="1900" y2="2820" stroke="#E8DDD0" stroke-width="3"/>
-
-  <!-- Middle botanical dots pattern -->
-  <g opacity="0.2" fill="#C67D5B">
-    <circle cx="1200" cy="3100" r="6"/>
-    <circle cx="1160" cy="3160" r="4"/>
-    <circle cx="1240" cy="3160" r="4"/>
-    <circle cx="1120" cy="3220" r="3"/>
-    <circle cx="1200" cy="3220" r="5"/>
-    <circle cx="1280" cy="3220" r="3"/>
-    <circle cx="1080" cy="3280" r="3"/>
-    <circle cx="1160" cy="3280" r="4"/>
-    <circle cx="1240" cy="3280" r="4"/>
-    <circle cx="1320" cy="3280" r="3"/>
+  <!-- Ornament dots under tagline -->
+  <g transform="translate(3600, 1540)">
+    <circle cx="-30" cy="0" r="8" fill="#C67D5B" opacity="0.4"/>
+    <circle cx="0" cy="0" r="12" fill="#C67D5B" opacity="0.7"/>
+    <circle cx="30" cy="0" r="8" fill="#C67D5B" opacity="0.4"/>
   </g>
 
-  <!-- Value props section -->
-  <g transform="translate(1200, 3700)">
-    <!-- Faith-rooted -->
-    <text x="0" y="-180" font-family="Georgia, serif" font-size="80" fill="#C67D5B" text-anchor="middle" opacity="0.9">🌱</text>
-    <text x="0" y="-80" font-family="Georgia, serif" font-size="90" font-weight="600" fill="#5C4A3A" text-anchor="middle" letter-spacing="4">Faith-Rooted</text>
-    <text x="0" y="20" font-family="Georgia, serif" font-size="72" fill="#7A6555" text-anchor="middle" font-style="italic">Grounded in love</text>
-  </g>
-
-  <line x1="400" y1="3980" x2="2000" y2="3980" stroke="#E8DDD0" stroke-width="2"/>
-
-  <g transform="translate(1200, 4280)">
-    <text x="0" y="-180" font-family="Georgia, serif" font-size="80" fill="#C67D5B" text-anchor="middle" opacity="0.9">🤝</text>
-    <text x="0" y="-80" font-family="Georgia, serif" font-size="90" font-weight="600" fill="#5C4A3A" text-anchor="middle" letter-spacing="4">Inclusive</text>
-    <text x="0" y="20" font-family="Georgia, serif" font-size="72" fill="#7A6555" text-anchor="middle" font-style="italic">Good hearts welcome</text>
-  </g>
-
-  <line x1="400" y1="4560" x2="2000" y2="4560" stroke="#E8DDD0" stroke-width="2"/>
-
-  <g transform="translate(1200, 4860)">
-    <text x="0" y="-180" font-family="Georgia, serif" font-size="80" fill="#C67D5B" text-anchor="middle" opacity="0.9">✨</text>
-    <text x="0" y="-80" font-family="Georgia, serif" font-size="90" font-weight="600" fill="#5C4A3A" text-anchor="middle" letter-spacing="4">Community</text>
-    <text x="0" y="20" font-family="Georgia, serif" font-size="72" fill="#7A6555" text-anchor="middle" font-style="italic">Real humans, doing life together</text>
-  </g>
-
-  <!-- Bottom decorative rule -->
-  <line x1="200" y1="5320" x2="2200" y2="5320" stroke="#E8DDD0" stroke-width="3"/>
-  <line x1="200" y1="5340" x2="2200" y2="5340" stroke="#C67D5B" stroke-width="1.5" opacity="0.5"/>
-
-  <!-- Website URL -->
-  <text x="1200" y="5620"
-    font-family="Georgia, 'Times New Roman', serif"
-    font-size="110"
-    font-weight="400"
+  <!-- Website + location -->
+  <text x="3600" y="1780"
+    font-family="Georgia, serif"
+    font-size="120"
     fill="#C67D5B"
     text-anchor="middle"
-    letter-spacing="6">saltandlight.social</text>
+    letter-spacing="8">saltandlight.social</text>
 
-  <!-- OC location tag -->
-  <text x="1200" y="5780"
+  <text x="3600" y="1960"
     font-family="Georgia, serif"
-    font-size="85"
+    font-size="95"
     fill="#A08878"
     text-anchor="middle"
-    letter-spacing="8">Orange County, CA</text>
+    letter-spacing="14">ORANGE COUNTY, CA</text>
 
-  <!-- Bottom logo repeat / small sun -->
-  <g transform="translate(1200, 6300)" opacity="0.35">
-    <g stroke="#C67D5B" stroke-width="4">
-      <line x1="0" y1="-80" x2="0" y2="-110"/>
-      <line x1="57" y1="-57" x2="78" y2="-78"/>
-      <line x1="80" y1="0" x2="110" y2="0"/>
-      <line x1="57" y1="57" x2="78" y2="78"/>
-      <line x1="0" y1="80" x2="0" y2="110"/>
-      <line x1="-57" y1="57" x2="-78" y2="78"/>
-      <line x1="-80" y1="0" x2="-110" y2="0"/>
-      <line x1="-57" y1="-57" x2="-78" y2="-78"/>
-    </g>
-    <circle cx="0" cy="0" r="55" fill="none" stroke="#C67D5B" stroke-width="3"/>
-    <circle cx="0" cy="0" r="14" fill="#C67D5B"/>
+  <!-- RIGHT SIDE — value props -->
+  <g transform="translate(5900, 900)">
+    <text x="0" y="0" font-family="Georgia, serif" font-size="95" fill="#5C4A3A" font-weight="600" letter-spacing="3">🌱 Faith-Rooted</text>
+    <text x="0" y="110" font-family="Georgia, serif" font-size="75" fill="#7A6555" font-style="italic">Grounded in love</text>
   </g>
 
-  <!-- Bottom text -->
-  <text x="1200" y="6740"
-    font-family="Georgia, serif"
-    font-size="78"
-    fill="#A08878"
-    text-anchor="middle"
-    letter-spacing="12"
-    opacity="0.8">OC'S COMMUNITY FOR GOOD PEOPLE</text>
+  <line x1="5600" y1="1090" x2="6900" y2="1090" stroke="#E8DDD0" stroke-width="2"/>
+
+  <g transform="translate(5900, 1180)">
+    <text x="0" y="0" font-family="Georgia, serif" font-size="95" fill="#5C4A3A" font-weight="600" letter-spacing="3">🤝 Inclusive</text>
+    <text x="0" y="110" font-family="Georgia, serif" font-size="75" fill="#7A6555" font-style="italic">Good hearts welcome</text>
+  </g>
+
+  <line x1="5600" y1="1370" x2="6900" y2="1370" stroke="#E8DDD0" stroke-width="2"/>
+
+  <g transform="translate(5900, 1460)">
+    <text x="0" y="0" font-family="Georgia, serif" font-size="95" fill="#5C4A3A" font-weight="600" letter-spacing="3">✨ Community</text>
+    <text x="0" y="110" font-family="Georgia, serif" font-size="75" fill="#7A6555" font-style="italic">Real humans, real life</text>
+  </g>
 
 </svg>
