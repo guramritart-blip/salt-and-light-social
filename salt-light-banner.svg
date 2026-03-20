@@ -1,59 +1,86 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7200 2400" width="7200" height="2400">
   <defs>
-    <!-- Watercolor soft blur filters -->
-    <filter id="wc-soft" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="55"/>
-    </filter>
-    <filter id="wc-med" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="90"/>
-    </filter>
-    <filter id="wc-large" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="130"/>
-    </filter>
-
-    <!-- Google Font via foreignObject not reliable — use style embed -->
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap');
-      .title { font-family: 'Cormorant Garamond', Georgia, serif; }
-      .sub { font-family: 'Cormorant Garamond', Georgia, serif; }
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400&amp;display=swap');
     </style>
+
+    <!-- Watercolor filter: turbulence displaces edges, then soft blur -->
+    <filter id="wc-a" x="-40%" y="-40%" width="180%" height="180%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.025 0.032" numOctaves="6" seed="3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="120" xChannelSelector="R" yChannelSelector="G" result="d"/>
+      <feGaussianBlur in="d" stdDeviation="18"/>
+    </filter>
+    <filter id="wc-b" x="-40%" y="-40%" width="180%" height="180%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.028 0.022" numOctaves="6" seed="8" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="110" xChannelSelector="R" yChannelSelector="G" result="d"/>
+      <feGaussianBlur in="d" stdDeviation="14"/>
+    </filter>
+    <filter id="wc-c" x="-40%" y="-40%" width="180%" height="180%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022 0.035" numOctaves="5" seed="12" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="130" xChannelSelector="R" yChannelSelector="G" result="d"/>
+      <feGaussianBlur in="d" stdDeviation="22"/>
+    </filter>
+    <filter id="wc-d" x="-40%" y="-40%" width="180%" height="180%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.03 0.025" numOctaves="6" seed="17" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="100" xChannelSelector="R" yChannelSelector="G" result="d"/>
+      <feGaussianBlur in="d" stdDeviation="16"/>
+    </filter>
   </defs>
 
-  <!-- ===== BACKGROUND ===== -->
-  <rect width="7200" height="2400" fill="#F0E7D3"/>
+  <!-- Cream background -->
+  <rect width="7200" height="2400" fill="#F0E8D4"/>
 
-  <!-- ===== WATERCOLOR BLOBS ===== -->
+  <!-- ===== TOP LEFT — SAGE GREEN ===== -->
+  <!-- Base wash (large, light) -->
+  <path d="M-200,-200 C400,0 900,-100 1200,300 C1500,700 1300,1100 900,1300 C500,1500 100,1700 -200,1500 Z"
+    fill="#7A9C78" opacity="0.40" filter="url(#wc-c)"/>
+  <!-- Second wash (mid) -->
+  <path d="M-200,-200 C300,100 700,0 1000,350 C1300,700 1100,1000 700,1200 C300,1400 0,1300 -200,1100 Z"
+    fill="#6B9068" opacity="0.38" filter="url(#wc-a)"/>
+  <!-- Third wash (dense inner) -->
+  <path d="M-100,0 C250,100 600,50 800,400 C1000,750 800,950 500,1050 C200,1150 -100,1000 -100,800 Z"
+    fill="#5E8560" opacity="0.35" filter="url(#wc-b)"/>
+  <!-- Wispy edge bleed top -->
+  <path d="M200,-200 C600,-100 1100,-200 1800,0 C1600,200 1200,100 600,100 C400,100 100,0 200,-200 Z"
+    fill="#8FAE8C" opacity="0.28" filter="url(#wc-c)"/>
 
-  <!-- TOP LEFT — Sage green, large organic -->
-  <ellipse cx="300" cy="200" rx="1100" ry="900" fill="#7A9C78" opacity="0.55" filter="url(#wc-large)"/>
-  <ellipse cx="600" cy="600" rx="700" ry="700" fill="#6A8F6A" opacity="0.5" filter="url(#wc-med)"/>
-  <ellipse cx="100" cy="900" rx="600" ry="800" fill="#84A882" opacity="0.45" filter="url(#wc-med)"/>
-  <!-- Wispy top-center green -->
-  <ellipse cx="2000" cy="100" rx="900" ry="400" fill="#8FAC8C" opacity="0.35" filter="url(#wc-large)"/>
+  <!-- ===== TOP RIGHT — TERRACOTTA ===== -->
+  <!-- Base wash -->
+  <path d="M7400,-200 C7000,0 6500,-100 6200,300 C5900,700 6200,1100 6600,1300 C7000,1500 7400,1300 7400,1000 Z"
+    fill="#C4775A" opacity="0.42" filter="url(#wc-c)"/>
+  <!-- Second wash -->
+  <path d="M7400,-200 C7100,0 6600,50 6400,400 C6200,750 6400,1000 6800,1100 C7200,1200 7400,1000 7400,800 Z"
+    fill="#BF6E50" opacity="0.38" filter="url(#wc-a)"/>
+  <!-- Wispy bleed left -->
+  <path d="M7400,-100 C7000,-100 6500,-200 5800,0 C6000,200 6500,100 7000,100 Z"
+    fill="#CC8868" opacity="0.28" filter="url(#wc-b)"/>
+  <!-- Small dense patch -->
+  <path d="M6800,0 C7000,100 7200,300 7100,600 C7000,800 6700,700 6600,500 C6500,300 6600,100 6800,0 Z"
+    fill="#B86A4A" opacity="0.32" filter="url(#wc-d)"/>
 
-  <!-- TOP RIGHT — Terracotta/rust -->
-  <ellipse cx="6900" cy="300" rx="900" ry="800" fill="#C47A5C" opacity="0.55" filter="url(#wc-large)"/>
-  <ellipse cx="7100" cy="800" rx="600" ry="700" fill="#BF7055" opacity="0.5" filter="url(#wc-med)"/>
-  <ellipse cx="6500" cy="150" rx="700" ry="400" fill="#CC8866" opacity="0.4" filter="url(#wc-med)"/>
+  <!-- ===== BOTTOM — TEAL ===== -->
+  <!-- Large sweeping base -->
+  <path d="M1200,2600 C2000,1900 3000,1750 4200,1800 C5400,1850 6200,1750 6800,2000 C7200,2150 7400,2500 7400,2600 Z"
+    fill="#4A8282" opacity="0.55" filter="url(#wc-c)"/>
+  <!-- Second wash -->
+  <path d="M2000,2600 C2600,2000 3400,1850 4400,1880 C5400,1910 6100,1850 6700,2100 C7100,2250 7400,2500 7400,2600 Z"
+    fill="#3D7575" opacity="0.45" filter="url(#wc-a)"/>
+  <!-- Dense inner bottom -->
+  <path d="M3000,2600 C3400,2100 4200,2000 5000,2050 C5800,2100 6300,2050 6800,2300 C7100,2450 7400,2600 7400,2600 Z"
+    fill="#336A6A" opacity="0.40" filter="url(#wc-b)"/>
+  <!-- Wispy bleed upward -->
+  <path d="M3600,1700 C4200,1600 5000,1650 5800,1750 C5600,1900 4800,1850 4200,1800 C3800,1780 3400,1820 3600,1700 Z"
+    fill="#558C8C" opacity="0.28" filter="url(#wc-d)"/>
 
-  <!-- BOTTOM — Teal, large sweeping -->
-  <ellipse cx="4800" cy="2300" rx="2800" ry="700" fill="#4A8282" opacity="0.65" filter="url(#wc-large)"/>
-  <ellipse cx="5500" cy="2100" rx="1800" ry="600" fill="#3D7575" opacity="0.55" filter="url(#wc-med)"/>
-  <ellipse cx="3200" cy="2350" rx="1400" ry="500" fill="#558A8A" opacity="0.4" filter="url(#wc-large)"/>
-
-  <!-- BOTTOM LEFT — Muted olive/taupe -->
-  <ellipse cx="800" cy="2200" rx="900" ry="600" fill="#8C9878" opacity="0.45" filter="url(#wc-large)"/>
-  <ellipse cx="400" cy="2350" rx="600" ry="400" fill="#7A8A68" opacity="0.4" filter="url(#wc-med)"/>
-
-  <!-- Small accent blob mid-right -->
-  <ellipse cx="6800" cy="1600" rx="500" ry="400" fill="#C08060" opacity="0.35" filter="url(#wc-large)"/>
+  <!-- ===== BOTTOM LEFT — Muted olive ===== -->
+  <path d="M-200,2600 C100,2100 500,1900 1100,2000 C1700,2100 2000,2350 1600,2600 Z"
+    fill="#8A9A70" opacity="0.38" filter="url(#wc-c)"/>
+  <path d="M-200,2600 C0,2200 400,2050 900,2100 C1400,2150 1600,2400 1200,2600 Z"
+    fill="#7A8C62" opacity="0.32" filter="url(#wc-a)"/>
 
   <!-- ===== TEXT ===== -->
-
-  <!-- "Salt & Light" — elegant mixed-case serif, dark forest green -->
   <text
-    x="3600" y="1230"
-    class="title"
+    x="3600" y="1220"
     font-family="'Cormorant Garamond', Georgia, 'Times New Roman', serif"
     font-size="700"
     font-weight="400"
@@ -62,15 +89,13 @@
     text-anchor="middle"
     letter-spacing="-5">Salt &amp; Light</text>
 
-  <!-- Tagline — small caps, spaced out -->
   <text
     x="3600" y="1530"
-    class="sub"
     font-family="'Cormorant Garamond', Georgia, 'Times New Roman', serif"
-    font-size="130"
+    font-size="128"
     font-weight="600"
     fill="#2D4E3C"
     text-anchor="middle"
-    letter-spacing="22">FIND YOUR PEOPLE AGAIN</text>
+    letter-spacing="24">FIND YOUR PEOPLE AGAIN</text>
 
 </svg>
