@@ -1,88 +1,85 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7200 2400" width="7200" height="2400">
   <defs>
     <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#F5EDE0"/>
-      <stop offset="40%" stop-color="#FFFAF3"/>
-      <stop offset="60%" stop-color="#FFFAF3"/>
-      <stop offset="100%" stop-color="#F5EDE0"/>
+      <stop offset="0%" stop-color="#C8D4BE"/>
+      <stop offset="30%" stop-color="#D4DCCA"/>
+      <stop offset="50%" stop-color="#DCE4D2"/>
+      <stop offset="70%" stop-color="#D4DCCA"/>
+      <stop offset="100%" stop-color="#C8D4BE"/>
     </linearGradient>
-    <linearGradient id="accentGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#C67D5B"/>
-      <stop offset="50%" stop-color="#D4956E"/>
-      <stop offset="100%" stop-color="#C67D5B"/>
+    <linearGradient id="pillGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#EDE5D8"/>
+      <stop offset="100%" stop-color="#E8DDD0"/>
     </linearGradient>
   </defs>
 
   <!-- Background -->
   <rect width="7200" height="2400" fill="url(#bgGrad)"/>
 
-  <!-- Top + bottom border bars -->
-  <rect x="0" y="0" width="7200" height="20" fill="url(#accentGrad)"/>
-  <rect x="0" y="2380" width="7200" height="20" fill="url(#accentGrad)"/>
+  <!-- Subtle vignette edges -->
+  <rect x="0" y="0" width="7200" height="2400" fill="url(#bgGrad)" opacity="0.3"/>
 
-  <!-- Decorative inner rules -->
-  <line x1="0" y1="50" x2="7200" y2="50" stroke="#E8DDD0" stroke-width="2"/>
-  <line x1="0" y1="2350" x2="7200" y2="2350" stroke="#E8DDD0" stroke-width="2"/>
+  <!-- Top + bottom border bars — terracotta -->
+  <rect x="0" y="0" width="7200" height="18" fill="#C4704A"/>
+  <rect x="0" y="2382" width="7200" height="18" fill="#C4704A"/>
 
-  <!-- Sun icon — centered, top -->
-  <g transform="translate(3600, 520)">
-    <g stroke="#C67D5B" stroke-width="6" opacity="0.45">
-      <line x1="0" y1="-200" x2="0" y2="-270"/>
-      <line x1="141" y1="-141" x2="191" y2="-191"/>
-      <line x1="200" y1="0" x2="270" y2="0"/>
-      <line x1="141" y1="141" x2="191" y2="191"/>
-      <line x1="0" y1="200" x2="0" y2="270"/>
-      <line x1="-141" y1="141" x2="-191" y2="191"/>
-      <line x1="-200" y1="0" x2="-270" y2="0"/>
-      <line x1="-141" y1="-141" x2="-191" y2="-191"/>
-    </g>
-    <circle cx="0" cy="0" r="150" fill="none" stroke="#C67D5B" stroke-width="5" opacity="0.35"/>
-    <circle cx="0" cy="0" r="36" fill="#C67D5B" opacity="0.55"/>
-  </g>
-
-  <!-- SALT & LIGHT -->
-  <text x="3600" y="1200"
-    font-family="Georgia, 'Times New Roman', serif"
-    font-size="700"
-    font-weight="700"
-    fill="#5C4A3A"
+  <!-- ORANGE COUNTY, CA pill — left side -->
+  <rect x="260" y="1060" width="820" height="110" rx="55" fill="url(#pillGrad)"/>
+  <text x="670" y="1130"
+    font-family="Georgia, serif"
+    font-size="68"
+    fill="#C4704A"
     text-anchor="middle"
-    letter-spacing="50">SALT &amp; LIGHT</text>
+    letter-spacing="10"
+    font-weight="600">ORANGE COUNTY, CA</text>
 
-  <!-- Thin rule -->
-  <line x1="2200" y1="1290" x2="5000" y2="1290" stroke="#C67D5B" stroke-width="4" opacity="0.55"/>
+  <!-- ORANGE COUNTY, CA pill — right side -->
+  <rect x="6120" y="1060" width="820" height="110" rx="55" fill="url(#pillGrad)"/>
+  <text x="6530" y="1130"
+    font-family="Georgia, serif"
+    font-size="68"
+    fill="#C4704A"
+    text-anchor="middle"
+    letter-spacing="10"
+    font-weight="600">ORANGE COUNTY, CA</text>
+
+  <!-- SALT & LIGHT — main title, centered -->
+  <!-- "SALT &" in dark brown -->
+  <text x="3600" y="1080"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="620"
+    font-weight="700"
+    fill="#2D1E0F"
+    text-anchor="middle"
+    letter-spacing="30">SALT &amp;</text>
+
+  <!-- "LIGHT" — split color like website: dark + terracotta -->
+  <!-- "LI" dark, "GHT" terracotta — gives that "People" accent effect -->
+  <text x="3600" y="1760"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="620"
+    font-weight="700"
+    fill="#2D1E0F"
+    text-anchor="middle"
+    letter-spacing="30">LI<tspan fill="#C4704A">GHT</tspan></text>
 
   <!-- Tagline -->
-  <text x="3600" y="1590"
+  <text x="3600" y="2060"
     font-family="Georgia, 'Times New Roman', serif"
-    font-size="210"
+    font-size="168"
     font-weight="400"
     fill="#3D2E22"
     text-anchor="middle"
-    letter-spacing="12"
+    letter-spacing="10"
     font-style="italic">Find your people again.</text>
 
-  <!-- Dot ornament -->
-  <g transform="translate(3600, 1740)">
-    <circle cx="-32" cy="0" r="7" fill="#C67D5B" opacity="0.4"/>
-    <circle cx="0" cy="0" r="11" fill="#C67D5B" opacity="0.65"/>
-    <circle cx="32" cy="0" r="7" fill="#C67D5B" opacity="0.4"/>
-  </g>
-
-  <!-- Website -->
-  <text x="3600" y="1960"
+  <!-- Website — subtle bottom center -->
+  <text x="3600" y="2280"
     font-family="Georgia, serif"
-    font-size="120"
-    fill="#C67D5B"
+    font-size="88"
+    fill="#5C4A3A"
     text-anchor="middle"
-    letter-spacing="10">saltandlight.social</text>
-
-  <!-- Location -->
-  <text x="3600" y="2130"
-    font-family="Georgia, serif"
-    font-size="90"
-    fill="#A08878"
-    text-anchor="middle"
-    letter-spacing="16">ORANGE COUNTY, CA</text>
+    letter-spacing="8"
+    opacity="0.7">saltandlight.social</text>
 
 </svg>
