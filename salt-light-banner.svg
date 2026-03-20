@@ -1,85 +1,96 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7200 2400" width="7200" height="2400">
   <defs>
-    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#C8D4BE"/>
-      <stop offset="30%" stop-color="#D4DCCA"/>
-      <stop offset="50%" stop-color="#DCE4D2"/>
-      <stop offset="70%" stop-color="#D4DCCA"/>
-      <stop offset="100%" stop-color="#C8D4BE"/>
-    </linearGradient>
-    <linearGradient id="pillGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#EDE5D8"/>
-      <stop offset="100%" stop-color="#E8DDD0"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#BEC9B4"/>
+      <stop offset="50%" stop-color="#D4DCCA"/>
+      <stop offset="100%" stop-color="#BEC9B4"/>
     </linearGradient>
   </defs>
 
   <!-- Background -->
-  <rect width="7200" height="2400" fill="url(#bgGrad)"/>
+  <rect width="7200" height="2400" fill="url(#bg)"/>
 
-  <!-- Subtle vignette edges -->
-  <rect x="0" y="0" width="7200" height="2400" fill="url(#bgGrad)" opacity="0.3"/>
+  <!-- Top border -->
+  <rect x="0" y="0" width="7200" height="24" fill="#C4704A"/>
+  <!-- Bottom border -->
+  <rect x="0" y="2376" width="7200" height="24" fill="#C4704A"/>
 
-  <!-- Top + bottom border bars — terracotta -->
-  <rect x="0" y="0" width="7200" height="18" fill="#C4704A"/>
-  <rect x="0" y="2382" width="7200" height="18" fill="#C4704A"/>
+  <!-- Top inner rule -->
+  <line x1="120" y1="70" x2="7080" y2="70" stroke="#A8B49E" stroke-width="2"/>
+  <!-- Bottom inner rule -->
+  <line x1="120" y1="2330" x2="7080" y2="2330" stroke="#A8B49E" stroke-width="2"/>
 
-  <!-- ORANGE COUNTY, CA pill — left side -->
-  <rect x="260" y="1060" width="820" height="110" rx="55" fill="url(#pillGrad)"/>
-  <text x="670" y="1130"
-    font-family="Georgia, serif"
-    font-size="68"
-    fill="#C4704A"
-    text-anchor="middle"
-    letter-spacing="10"
-    font-weight="600">ORANGE COUNTY, CA</text>
+  <!--
+    LAYOUT (all values precise, no overlaps):
+    Canvas: 7200 x 2400
+    Vertically centered block:
 
-  <!-- ORANGE COUNTY, CA pill — right side -->
-  <rect x="6120" y="1060" width="820" height="110" rx="55" fill="url(#pillGrad)"/>
-  <text x="6530" y="1130"
-    font-family="Georgia, serif"
-    font-size="68"
-    fill="#C4704A"
-    text-anchor="middle"
-    letter-spacing="10"
-    font-weight="600">ORANGE COUNTY, CA</text>
+    SALT & LIGHT  — font 640, cap-height ~467px
+      baseline y = 880  (top of caps at y=413)
+    
+    Divider line   y = 980
 
-  <!-- SALT & LIGHT — main title, centered -->
-  <!-- "SALT &" in dark brown -->
-  <text x="3600" y="1080"
+    "Find your people again."  — font 168, cap-height ~122px
+      baseline y = 1140  (top at y=1018, well below divider)
+
+    Dot ornament   y = 1230 (center)
+
+    saltandlight.social  — font 104, cap-height ~76px
+      baseline y = 1390  (top at y=1314)
+
+    ORANGE COUNTY, CA  — font 88, cap-height ~64px
+      baseline y = 1530  (top at y=1466)
+
+    Total content spans y=413 to y=1580
+    Centered in 2400: (2400-1167)/2 = 616 top margin ✓ matches
+  -->
+
+  <!-- SALT & LIGHT -->
+  <text
+    x="3600" y="880"
     font-family="Georgia, 'Times New Roman', serif"
-    font-size="620"
+    font-size="640"
     font-weight="700"
     fill="#2D1E0F"
     text-anchor="middle"
-    letter-spacing="30">SALT &amp;</text>
+    letter-spacing="28">SALT &amp; LIGHT</text>
 
-  <!-- "LIGHT" — split color like website: dark + terracotta -->
-  <!-- "LI" dark, "GHT" terracotta — gives that "People" accent effect -->
-  <text x="3600" y="1760"
-    font-family="Georgia, 'Times New Roman', serif"
-    font-size="620"
-    font-weight="700"
-    fill="#2D1E0F"
-    text-anchor="middle"
-    letter-spacing="30">LI<tspan fill="#C4704A">GHT</tspan></text>
+  <!-- Divider -->
+  <line x1="2000" y1="980" x2="5200" y2="980" stroke="#C4704A" stroke-width="5" opacity="0.7"/>
 
   <!-- Tagline -->
-  <text x="3600" y="2060"
+  <text
+    x="3600" y="1140"
     font-family="Georgia, 'Times New Roman', serif"
     font-size="168"
     font-weight="400"
-    fill="#3D2E22"
+    font-style="italic"
+    fill="#3D2614"
     text-anchor="middle"
-    letter-spacing="10"
-    font-style="italic">Find your people again.</text>
+    letter-spacing="8">Find your people again.</text>
 
-  <!-- Website — subtle bottom center -->
-  <text x="3600" y="2280"
+  <!-- Dot ornament -->
+  <circle cx="3556" cy="1230" r="9" fill="#C4704A" opacity="0.5"/>
+  <circle cx="3600" cy="1230" r="13" fill="#C4704A" opacity="0.7"/>
+  <circle cx="3644" cy="1230" r="9" fill="#C4704A" opacity="0.5"/>
+
+  <!-- Website -->
+  <text
+    x="3600" y="1390"
+    font-family="Georgia, serif"
+    font-size="104"
+    fill="#C4704A"
+    text-anchor="middle"
+    letter-spacing="10">saltandlight.social</text>
+
+  <!-- Location -->
+  <text
+    x="3600" y="1530"
     font-family="Georgia, serif"
     font-size="88"
     fill="#5C4A3A"
     text-anchor="middle"
-    letter-spacing="8"
-    opacity="0.7">saltandlight.social</text>
+    letter-spacing="16"
+    opacity="0.75">ORANGE COUNTY, CA</text>
 
 </svg>
