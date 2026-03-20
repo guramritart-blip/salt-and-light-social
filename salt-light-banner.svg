@@ -15,39 +15,16 @@
   <!-- Bottom border -->
   <rect x="0" y="2376" width="7200" height="24" fill="#C4704A"/>
 
-  <!-- Top inner rule -->
+  <!-- Inner rules -->
   <line x1="120" y1="70" x2="7080" y2="70" stroke="#A8B49E" stroke-width="2"/>
-  <!-- Bottom inner rule -->
   <line x1="120" y1="2330" x2="7080" y2="2330" stroke="#A8B49E" stroke-width="2"/>
 
-  <!--
-    LAYOUT (all values precise, no overlaps):
-    Canvas: 7200 x 2400
-    Vertically centered block:
+  <!-- SALT & LIGHT — vertically centered block -->
+  <!-- Content block center: y=1200, total block height ~1100px, so top at ~650 -->
+  <!-- Title baseline at y=1100, cap-height 467px, so top of text at 633 ✓ -->
 
-    SALT & LIGHT  — font 640, cap-height ~467px
-      baseline y = 880  (top of caps at y=413)
-    
-    Divider line   y = 980
-
-    "Find your people again."  — font 168, cap-height ~122px
-      baseline y = 1140  (top at y=1018, well below divider)
-
-    Dot ornament   y = 1230 (center)
-
-    saltandlight.social  — font 104, cap-height ~76px
-      baseline y = 1390  (top at y=1314)
-
-    ORANGE COUNTY, CA  — font 88, cap-height ~64px
-      baseline y = 1530  (top at y=1466)
-
-    Total content spans y=413 to y=1580
-    Centered in 2400: (2400-1167)/2 = 616 top margin ✓ matches
-  -->
-
-  <!-- SALT & LIGHT -->
   <text
-    x="3600" y="880"
+    x="3600" y="1100"
     font-family="Georgia, 'Times New Roman', serif"
     font-size="640"
     font-weight="700"
@@ -56,11 +33,11 @@
     letter-spacing="28">SALT &amp; LIGHT</text>
 
   <!-- Divider -->
-  <line x1="2000" y1="980" x2="5200" y2="980" stroke="#C4704A" stroke-width="5" opacity="0.7"/>
+  <line x1="1800" y1="1210" x2="5400" y2="1210" stroke="#C4704A" stroke-width="5" opacity="0.65"/>
 
-  <!-- Tagline -->
+  <!-- Tagline — baseline at 1210+80+120=1410 -->
   <text
-    x="3600" y="1140"
+    x="3600" y="1410"
     font-family="Georgia, 'Times New Roman', serif"
     font-size="168"
     font-weight="400"
@@ -69,23 +46,23 @@
     text-anchor="middle"
     letter-spacing="8">Find your people again.</text>
 
-  <!-- Dot ornament -->
-  <circle cx="3556" cy="1230" r="9" fill="#C4704A" opacity="0.5"/>
-  <circle cx="3600" cy="1230" r="13" fill="#C4704A" opacity="0.7"/>
-  <circle cx="3644" cy="1230" r="9" fill="#C4704A" opacity="0.5"/>
+  <!-- Dot ornament at y=1500 -->
+  <circle cx="3556" cy="1500" r="9" fill="#C4704A" opacity="0.5"/>
+  <circle cx="3600" cy="1500" r="13" fill="#C4704A" opacity="0.7"/>
+  <circle cx="3644" cy="1500" r="9" fill="#C4704A" opacity="0.5"/>
 
-  <!-- Website -->
+  <!-- Website — baseline at 1500+60+76=1636 -->
   <text
-    x="3600" y="1390"
+    x="3600" y="1636"
     font-family="Georgia, serif"
     font-size="104"
     fill="#C4704A"
     text-anchor="middle"
     letter-spacing="10">saltandlight.social</text>
 
-  <!-- Location -->
+  <!-- Location — baseline at 1636+40+64=1740 -->
   <text
-    x="3600" y="1530"
+    x="3600" y="1740"
     font-family="Georgia, serif"
     font-size="88"
     fill="#5C4A3A"
