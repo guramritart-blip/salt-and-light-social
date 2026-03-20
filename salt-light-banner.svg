@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7200 2400" width="7200" height="2400">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#BEC9B4"/>
-      <stop offset="50%" stop-color="#D4DCCA"/>
-      <stop offset="100%" stop-color="#BEC9B4"/>
+      <stop offset="0%" stop-color="#C8D4C4"/>
+      <stop offset="50%" stop-color="#D4DFD0"/>
+      <stop offset="100%" stop-color="#C8D4C4"/>
     </linearGradient>
   </defs>
 
@@ -11,63 +11,60 @@
   <rect width="7200" height="2400" fill="url(#bg)"/>
 
   <!-- Top border -->
-  <rect x="0" y="0" width="7200" height="24" fill="#C4704A"/>
+  <rect x="0" y="0" width="7200" height="22" fill="#C67D5B"/>
   <!-- Bottom border -->
-  <rect x="0" y="2376" width="7200" height="24" fill="#C4704A"/>
+  <rect x="0" y="2378" width="7200" height="22" fill="#C67D5B"/>
 
   <!-- Inner rules -->
-  <line x1="120" y1="70" x2="7080" y2="70" stroke="#A8B49E" stroke-width="2"/>
-  <line x1="120" y1="2330" x2="7080" y2="2330" stroke="#A8B49E" stroke-width="2"/>
+  <line x1="140" y1="66" x2="7060" y2="66" stroke="#B8C8B4" stroke-width="2"/>
+  <line x1="140" y1="2334" x2="7060" y2="2334" stroke="#B8C8B4" stroke-width="2"/>
 
-  <!-- SALT & LIGHT — vertically centered block -->
-  <!-- Content block center: y=1200, total block height ~1100px, so top at ~650 -->
-  <!-- Title baseline at y=1100, cap-height 467px, so top of text at 633 ✓ -->
-
+  <!-- SALT & LIGHT — centered -->
   <text
-    x="3600" y="1100"
+    x="3600" y="1080"
     font-family="Georgia, 'Times New Roman', serif"
     font-size="640"
     font-weight="700"
-    fill="#2D1E0F"
+    fill="#5C4A3A"
     text-anchor="middle"
     letter-spacing="28">SALT &amp; LIGHT</text>
 
-  <!-- Divider -->
-  <line x1="1800" y1="1210" x2="5400" y2="1210" stroke="#C4704A" stroke-width="5" opacity="0.65"/>
+  <!-- Divider line -->
+  <line x1="1900" y1="1190" x2="5300" y2="1190" stroke="#C67D5B" stroke-width="5" opacity="0.6"/>
 
-  <!-- Tagline — baseline at 1210+80+120=1410 -->
+  <!-- Tagline: "Find your people again." with people in terracotta -->
   <text
-    x="3600" y="1410"
+    x="3600" y="1390"
     font-family="Georgia, 'Times New Roman', serif"
     font-size="168"
     font-weight="400"
     font-style="italic"
-    fill="#3D2614"
+    fill="#3D2E22"
     text-anchor="middle"
-    letter-spacing="8">Find your people again.</text>
+    letter-spacing="6">Find your <tspan fill="#C67D5B">people</tspan> again.</text>
 
-  <!-- Dot ornament at y=1500 -->
-  <circle cx="3556" cy="1500" r="9" fill="#C4704A" opacity="0.5"/>
-  <circle cx="3600" cy="1500" r="13" fill="#C4704A" opacity="0.7"/>
-  <circle cx="3644" cy="1500" r="9" fill="#C4704A" opacity="0.5"/>
+  <!-- Dot ornament -->
+  <circle cx="3556" cy="1480" r="9" fill="#C67D5B" opacity="0.45"/>
+  <circle cx="3600" cy="1480" r="13" fill="#C67D5B" opacity="0.65"/>
+  <circle cx="3644" cy="1480" r="9" fill="#C67D5B" opacity="0.45"/>
 
-  <!-- Website — baseline at 1500+60+76=1636 -->
+  <!-- Website -->
   <text
-    x="3600" y="1636"
+    x="3600" y="1640"
     font-family="Georgia, serif"
     font-size="104"
-    fill="#C4704A"
+    fill="#C67D5B"
     text-anchor="middle"
     letter-spacing="10">saltandlight.social</text>
 
-  <!-- Location — baseline at 1636+40+64=1740 -->
+  <!-- Location -->
   <text
-    x="3600" y="1740"
+    x="3600" y="1770"
     font-family="Georgia, serif"
     font-size="88"
     fill="#5C4A3A"
     text-anchor="middle"
     letter-spacing="16"
-    opacity="0.75">ORANGE COUNTY, CA</text>
+    opacity="0.7">ORANGE COUNTY, CA</text>
 
 </svg>
