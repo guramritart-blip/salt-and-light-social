@@ -415,15 +415,14 @@
     </ul>
     <!-- Paper plane + chip -->
     <div style="display:flex;align-items:center;gap:12px;margin-top:16px;">
-      <img src="paper-plane-final.png"
-        class="anim-pop"
-        style="
-          width:clamp(130px,16vw,240px);
-          flex-shrink:0;
-          animation-delay:2.9s;
-          opacity:0;
-
-        "/>
+      <svg class="anim-pop" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"
+        style="width:clamp(100px,14vw,200px);flex-shrink:0;animation-delay:2.9s;opacity:0;">
+        <g transform="rotate(-30,60,60)">
+          <polygon points="10,60 110,20 80,100" fill="#C67D5B" opacity="0.9"/>
+          <polygon points="10,60 110,20 60,65" fill="#a0623f" opacity="0.7"/>
+          <polygon points="60,65 80,100 65,72" fill="#e8a07a" opacity="0.6"/>
+        </g>
+      </svg>
       <span class="chip chip-terra anim-chip" style="animation-delay:3.3s;font-size:clamp(14px,1.5vw,21px);padding:13px 28px;">
         ♡ &nbsp;Love at the center
       </span>
