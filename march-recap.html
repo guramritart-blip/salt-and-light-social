@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our First Event Recap | Salt & Light Social</title>
+    <meta name="description" content="We did it. A look back at our first Salt & Light event in March 2026 — and what's coming next.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Our First Event Recap | Salt & Light Social">
+    <meta property="og:description" content="You showed up, and something beautiful happened. A recap of our first gathering.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://files.catbox.moe/lbezrc.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://files.catbox.moe/lbezrc.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-cream: #FDF6EC;
+            --color-warm-white: #FFFAF3;
+            --color-terracotta: #C67D5B;
+            --color-terracotta-dark: #A8624A;
+            --color-sage: #8B9E7E;
+            --color-brown: #5C4A3A;
+            --color-text: #3D2E22;
+            --color-text-light: #7A6B5D;
+            --color-sand: #E8DDD0;
+            --font-heading: 'DM Serif Display', serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            background-color: var(--color-cream);
+            line-height: 1.8;
+        }
+
+        /* NAV */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(253, 246, 236, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(92, 74, 58, 0.08);
+        }
+
+        .nav-logo {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            color: var(--color-brown);
+            text-decoration: none;
+        }
+
+        .nav-cta {
+            background: var(--color-terracotta);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* HERO */
+        .hero {
+            padding: 120px 24px 64px;
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--color-terracotta);
+            margin-bottom: 1.2rem;
+        }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            color: var(--color-brown);
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--color-text-light);
+            font-weight: 300;
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        /* CONTENT */
+        .content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px 80px;
+        }
+
+        .prose p {
+            font-size: 1.05rem;
+            color: var(--color-text);
+            font-weight: 300;
+            margin-bottom: 1.4rem;
+        }
+
+        /* PHOTO GRID */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 48px 0;
+        }
+
+        .photo-grid img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .photo-grid img.wide {
+            grid-column: span 2;
+            aspect-ratio: 16/9;
+        }
+
+        /* DIVIDER */
+        .divider {
+            border: none;
+            border-top: 1px solid var(--color-sand);
+            margin: 48px 0;
+        }
+
+        /* SECTION HEADING */
+        .section-heading {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            color: var(--color-brown);
+            margin-bottom: 1.2rem;
+        }
+
+        /* UPCOMING EVENTS BOX */
+        .events-box {
+            background: var(--color-warm-white);
+            border-radius: 12px;
+            padding: 32px;
+            margin: 40px 0;
+            border: 1px solid var(--color-sand);
+        }
+
+        .events-box h3 {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            color: var(--color-brown);
+            margin-bottom: 8px;
+        }
+
+        .events-box .subtitle {
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+            margin-bottom: 24px;
+        }
+
+        .event-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .event-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--color-sand);
+            font-size: 1rem;
+            color: var(--color-text);
+        }
+
+        .event-list li:last-child {
+            border-bottom: none;
+        }
+
+        .event-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--color-terracotta);
+            flex-shrink: 0;
+        }
+
+        /* SIGN-OFF */
+        .signoff {
+            text-align: center;
+            margin: 48px 0 40px;
+        }
+
+        .signoff p {
+            font-size: 1.05rem;
+            color: var(--color-text);
+            font-weight: 300;
+            margin-bottom: 8px;
+        }
+
+        .signoff .names {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: var(--color-brown);
+        }
+
+        /* CTA */
+        .cta-block {
+            background: var(--color-brown);
+            border-radius: 16px;
+            padding: 40px 32px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .cta-block p {
+            color: rgba(255,255,255,0.75);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--color-terracotta);
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 14px 36px;
+            border-radius: 50px;
+            letter-spacing: 0.3px;
+            margin-bottom: 16px;
+        }
+
+        .cta-website {
+            display: block;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.85rem;
+            text-decoration: none;
+            margin-top: 12px;
+        }
+
+        .cta-website:hover {
+            color: rgba(255,255,255,0.8);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 32px 24px;
+            font-size: 0.8rem;
+            color: var(--color-text-light);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 560px) {
+            .photo-grid {
+                grid-template-columns: 1fr;
+            }
+            .photo-grid img.wide {
+                grid-column: span 1;
+            }
+            .events-box {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <a href="/" class="nav-logo">Salt &amp; Light Social</a>
+        <a href="https://groupme.com/join_group/113493613/WxQ0pFf1" class="nav-cta">Join the GroupMe</a>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <span class="hero-tag">March 2026 Recap</span>
+        <h1>You showed up, and something beautiful happened.</h1>
+        <p>We are still glowing from Saturday, and honestly, we don't think that feeling is going away anytime soon.</p>
+    </section>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+        <div class="prose">
+            <p>When we planned this event, we hoped people would connect. What we didn't expect was just <em>how fast</em> it would happen. Within minutes, conversations were flowing, laughs were loud, and strangers were swapping numbers like old friends. You all brought such open, genuine energy to the room and it made the whole thing feel electric. We are so grateful for every single one of you who showed up.</p>
+        </div>
+
+        <!-- PHOTO GRID -->
+        <div class="photo-grid">
+            <img src="https://files.catbox.moe/lbezrc.jpg" alt="The room full of people" class="wide" />
+            <img src="https://files.catbox.moe/segokc.jpg" alt="The Salt & Light sign" />
+            <img src="https://files.catbox.moe/09x6cu.jpg" alt="Welcome table" />
+            <img src="https://files.catbox.moe/rm7a52.jpg" alt="Candid moments" />
+            <img src="https://files.catbox.moe/7zmpor.jpg" alt="Goodie bags" />
+            <img src="https://files.catbox.moe/k7po2g.jpg" alt="Pamphlets" class="wide" />
+        </div>
+
+        <hr class="divider">
+
+        <div class="prose">
+            <h2 class="section-heading">The magic didn't stop when the event ended.</h2>
+            <p>One of the things we're most excited about is what's been happening since Saturday. Members have already started forming hobby groups and planning their own meetups with each other, completely organically. That is Salt &amp; Light working exactly the way we dreamed it would. A community that keeps going between events, that keeps showing up for each other in everyday life.</p>
+            <p>If you haven't already gotten involved in a hobby group, we want to encourage you to reach out. Ask a member, shoot us a message, or keep an eye on the GroupMe. This is your community too.</p>
+        </div>
+
+        <!-- UPCOMING EVENTS -->
+        <div class="events-box">
+            <h3>What's Coming Up</h3>
+            <p class="subtitle">We have so much planned this spring. Here's what's on the horizon:</p>
+            <ul class="event-list">
+                <li><span class="event-dot"></span> Easter Week Picnic</li>
+                <li><span class="event-dot"></span> Spring Beach Bonfire</li>
+                <li><span class="event-dot"></span> Devil Wears Prada 2 Movie Night</li>
+                <li><span class="event-dot"></span> Hike &amp; Coffee</li>
+            </ul>
+            <p style="margin-top: 20px; font-size: 0.9rem; color: var(--color-text-light);">Details for each event will be posted in the GroupMe. Make sure you're in there so you don't miss a thing.</p>
+        </div>
+
+        <hr class="divider">
+
+        <!-- SIGN-OFF -->
+        <div class="signoff">
+            <p>See you all soon. Keep being the kind of people who show up for each other. 💗</p>
+            <p style="margin-top: 8px; font-size: 0.95rem; color: var(--color-text-light);">With love,</p>
+            <p class="names">Sarah &amp; G</p>
+            <p style="font-size: 0.9rem; color: var(--color-text-light); margin-top: 4px;">Salt &amp; Light</p>
+        </div>
+
+        <!-- CTA BLOCK -->
+        <div class="cta-block">
+            <p>All event updates and hangout planning happen in our GroupMe. Join so you don't miss what's next.</p>
+            <a href="https://groupme.com/join_group/113493613/WxQ0pFf1" class="cta-button">Join the GroupMe 💬</a>
+            <a href="https://saltandlight.social" class="cta-website">saltandlight.social</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Salt &amp; Light Social &bull; Orange County, CA</p>
+    </footer>
+
+</body>
+</html>
