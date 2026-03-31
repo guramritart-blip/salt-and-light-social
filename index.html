@@ -138,6 +138,62 @@
             transition: all 0.3s ease;
         }
 
+        /* ===== FIRST EVENT BANNER ===== */
+        .first-event-banner {
+            background: var(--color-warm-white);
+            border-top: 1px solid var(--color-sand);
+            border-bottom: 1px solid var(--color-sand);
+            padding: 20px 2rem;
+        }
+
+        .feb-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .feb-text {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .feb-tag {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--color-terracotta);
+            background: rgba(198, 125, 91, 0.1);
+            padding: 4px 10px;
+            border-radius: 50px;
+            white-space: nowrap;
+        }
+
+        .feb-headline {
+            font-size: 0.95rem;
+            color: var(--color-brown);
+            font-weight: 400;
+        }
+
+        .feb-link {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--color-terracotta);
+            text-decoration: none;
+            white-space: nowrap;
+            transition: color 0.2s ease;
+        }
+
+        .feb-link:hover {
+            color: var(--color-terracotta-dark);
+        }
+
         /* ===== HERO ===== */
         .hero {
             min-height: 100vh;
@@ -875,6 +931,17 @@
         <div class="hero-scroll">
             <span>Scroll</span>
             <div class="arrow"></div>
+        </div>
+    </section>
+
+    <!-- FIRST EVENT BANNER -->
+    <section class="first-event-banner">
+        <div class="feb-inner">
+            <div class="feb-text">
+                <span class="feb-tag">March 2026</span>
+                <p class="feb-headline">We held our first event. It was something special.</p>
+            </div>
+            <a href="/march-recap" class="feb-link">See the recap &rarr;</a>
         </div>
     </section>
 
