@@ -138,60 +138,96 @@
             transition: all 0.3s ease;
         }
 
-        /* ===== FIRST EVENT BANNER ===== */
+        /* ===== FIRST EVENT SECTION ===== */
         .first-event-banner {
             background: var(--color-warm-white);
             border-top: 1px solid var(--color-sand);
             border-bottom: 1px solid var(--color-sand);
-            padding: 20px 2rem;
+            padding: 72px 2rem;
         }
 
         .feb-inner {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 56px;
             align-items: center;
-            justify-content: space-between;
-            gap: 1.5rem;
-            flex-wrap: wrap;
+        }
+
+        .feb-image {
+            border-radius: 14px;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            box-shadow: 0 12px 40px rgba(92, 74, 58, 0.15);
+        }
+
+        .feb-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .feb-image:hover img {
+            transform: scale(1.03);
         }
 
         .feb-text {
             display: flex;
-            align-items: center;
-            gap: 1rem;
-            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 0;
         }
 
         .feb-tag {
+            display: inline-block;
             font-size: 0.7rem;
             font-weight: 600;
             letter-spacing: 2px;
             text-transform: uppercase;
             color: var(--color-terracotta);
-            background: rgba(198, 125, 91, 0.1);
-            padding: 4px 10px;
-            border-radius: 50px;
-            white-space: nowrap;
+            margin-bottom: 1rem;
         }
 
         .feb-headline {
-            font-size: 0.95rem;
+            font-family: var(--font-heading);
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
             color: var(--color-brown);
-            font-weight: 400;
+            line-height: 1.25;
+            margin-bottom: 1.2rem;
+        }
+
+        .feb-body {
+            font-size: 1rem;
+            color: var(--color-text-light);
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: 2rem;
         }
 
         .feb-link {
-            font-size: 0.9rem;
+            display: inline-block;
+            background: var(--color-terracotta);
+            color: white;
+            font-size: 0.95rem;
             font-weight: 600;
-            color: var(--color-terracotta);
             text-decoration: none;
-            white-space: nowrap;
-            transition: color 0.2s ease;
+            padding: 13px 28px;
+            border-radius: 50px;
+            transition: background 0.2s ease;
+            align-self: flex-start;
         }
 
         .feb-link:hover {
-            color: var(--color-terracotta-dark);
+            background: var(--color-terracotta-dark);
+        }
+
+        @media (max-width: 720px) {
+            .feb-inner {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
         }
 
         /* ===== HERO ===== */
@@ -934,14 +970,18 @@
         </div>
     </section>
 
-    <!-- FIRST EVENT BANNER -->
+    <!-- FIRST EVENT SECTION -->
     <section class="first-event-banner">
         <div class="feb-inner">
-            <div class="feb-text">
-                <span class="feb-tag">March 2026</span>
-                <p class="feb-headline">We held our first event. It was something special.</p>
+            <div class="feb-image">
+                <img src="https://files.catbox.moe/lbezrc.jpg" alt="Our first Salt & Light event" />
             </div>
-            <a href="/march-recap" class="feb-link">See the recap &rarr;</a>
+            <div class="feb-text">
+                <span class="feb-tag">March 2026 &mdash; Our First Event</span>
+                <h2 class="feb-headline">We showed up for each other. And it was something special.</h2>
+                <p class="feb-body">Strangers walked in and left as friends. Conversations flowed, laughs were loud, and something real started building in that room. This is what Salt &amp; Light is about.</p>
+                <a href="/march-recap" class="feb-link">See the full recap &rarr;</a>
+            </div>
         </div>
     </section>
 
